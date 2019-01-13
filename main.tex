@@ -1,0 +1,33 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[nolist]{acronym}% http://ctan.org/pkg/acronym
+
+\begin{document}
+\begin{acronym}
+\acro{CORLP}    [CORLP]     {Complex Representation-based Link Prediction}
+\acro{PCA}    [PCA]     {Principal Component Analysis}
+\end{acronym}
+
+%   PAGE:   TITLE
+\input{title.tex}
+\clearpage
+
+\tableofcontents
+\clearpage
+
+\section{Introduction}
+\input{introduction.tex}
+
+\section{Methodology}
+\input{methodology.tex}
+
+\section{Conclusion}
+\input{conclusion.tex}
+
+\clearpage
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}

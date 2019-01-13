@@ -1,0 +1,18 @@
+In this paper, proposed method is based on converting past user-item interactions to graph model. There are two types of nodes, first one is users and the other one is items. In this model, edges between user-item refer to like, edges between user-user and item-item refer to similarity. User-user and item-item link are represented with real numers and user-item link are represented with complex numbers.\cite{xie2015link}
+
+In MovieLens dataset, votes are represented between 1 and 5. Links between users and items refer to like or dislike for that reason they need to be expressed with complex numbers. Vote  (0) is expressed with 0, votes (1,2) are expressed with -j and votes (3,4,5) are expressed with j.\cite{xie2015link} Using this expression, I have created user-item and item-user matrix.
+
+Computing similarity between users and items are essential in \ac{CORLP} method. But when size grows, computing similarity becomes more expensive. For this reason user-item data need to be decompressed. In this paper, I have used \ac{PCA} for decomposition.
+
+When the requirements achieved similarity can be calculate for both users and items. In this paper, I have used pearson correlation to calculate similarity. Using pearson correlation, I have created user-user and item-item similarity matrixes.
+
+Finally, using user-user, user-item, item-user and item-item matrixes, I have created adjacency matrix. Adjacency matrix is 2x2 matrix whose items are
+\[
+A=
+  \begin{bmatrix}
+    user-user & user-item \\
+    item-user & item-item
+  \end{bmatrix}
+\]
+
+"Since the power sum of the adjacency matrix measures closeness among nodes, each entry of the top-right component expresses how relevant any item is to a particular user."\cite{xie2015link} After calculating power sum of the adjacency matrix, recommendations can be ranked for each individual user.
