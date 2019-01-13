@@ -4,7 +4,7 @@ In MovieLens dataset, votes are represented between 1 and 5. Links between users
 
 Computing similarity between users and items are essential in \ac{CORLP} method. But when size grows, computing similarity becomes more expensive. For this reason user-item data need to be decompressed. In this paper, I have used \ac{PCA} for decomposition.
 
-When the requirements achieved similarity can be calculate for both users and items. In this paper, I have used pearson correlation to calculate similarity. Using pearson correlation, I have created user-user and item-item similarity matrixes.
+When the requirements achieved similarity can be calculated for both users and items. In this paper, I have used pearson correlation to calculate similarity. Using pearson correlation, I have created user-user and item-item similarity matrixes.
 
 Finally, using user-user, user-item, item-user and item-item matrixes, I have created adjacency matrix. Adjacency matrix is 2x2 matrix whose items are
 \[
